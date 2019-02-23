@@ -36,7 +36,7 @@ a {
   display: inline-block;
   width: 52px;
   height: 52px;
-  background: url(/assets/avatar.png) no-repeat;
+  background: url(../assets/avatar.png) no-repeat;
   background-size: cover;
   position: absolute;
   left: 524px;
@@ -98,7 +98,7 @@ h1 {
   display: inline-block;
   width: 17px;
   height: 13.8px;
-  background: url(/assets/twitter-logo.png) no-repeat;
+  background: url(../assets/twitter-logo.png) no-repeat;
   background-size: cover;
 }
 
@@ -106,7 +106,7 @@ h1 {
   display: inline-block;
   width: 20.8px;
   height: 13px;
-  background: url(/assets/be-logo.png) no-repeat;
+  background: url(../assets/be-logo.png) no-repeat;
   background-size: cover;
   margin: 0 30px;
 }
@@ -115,7 +115,7 @@ h1 {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url(/assets/instagram-logo.png) no-repeat;
+  background: url(../assets/instagram-logo.png) no-repeat;
   background-size: cover;
 }
 
