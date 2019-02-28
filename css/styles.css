@@ -38,7 +38,8 @@ a {
   background: url(../assets/avatar.png) no-repeat;
   background-size: cover;
   position: absolute;
-  left: 524px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-link-left {
