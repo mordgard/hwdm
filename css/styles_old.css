@@ -6,96 +6,120 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  
 }
 
 a {
   text-decoration: none;
+  transition: .5s;
   color: #007fff;
 }
 
-
-.container {
-  width: 1101px;
-  margin: 0 auto;
-  background-image: repeating-linear-gradient(to right, #ededed 0px,#fff 1px, #fff 275px);
+a:hover {
+  color: #000;
+  transition: .5s;
 }
 
-.clear {
-  clear: both;
+/* HEADER  */
+
+.container {
+  border-bottom: 2px solid #ededed;
+}
+
+.bg-gradient {
+  background-image: repeating-linear-gradient(to right, #ededed 0px,#fff 2px, #fff 275px);
+}
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .header-nav {
-  margin-top: 100px;
-  height: 54px;
+  list-style: none;
+  padding-top: 115px;
   position: relative;
 }
 
-.profile-logo {
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
   display: inline-block;
-  width: 52px;
-  height: 52px;
-  background: url(../assets/avatar.png) no-repeat;
-  background-size: cover;
+}
+
+.nav-item:nth-child(1), .nav-item:nth-child(2) {
+  float: left;
+}
+
+.nav-item:nth-child(1) {
+  margin-right: 70px;
+}
+
+.nav-item:nth-child(4), .nav-item:nth-child(5) {
+  float: right;
+}
+
+.nav-item:nth-child(4) {
+  margin-left: 70px;
+}
+
+.link {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.logo-item {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.nav-link-left {
-  float: left;
+.profile-logo {
+  width: 52px;
+  height: 52px;
+  background: url(../assets/avatar.png) no-repeat;
+  background-size: cover;
+  transform: translateY(-25%);
 }
 
-.nav-link-right {
-  float: right;
+.clearfix {
+  clear: both;
 }
 
-.nav-item {
-  height: 50%;
-  transform: translateY(50%);
-}
-
-.link:first-child {
-  padding: 0;
-  margin-right: 35px;
-}
-.link:last-child {
-  padding: 0;
-  margin-left: 35px;
-}
-
-.link {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-a:hover {
-  color: #93cbff;
-  transition: .4s;
-}
 .headline {
   width: 550px;
-  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 134px;
   text-align: center;
-  margin: 0 auto;
-  line-height: 60px;
-  margin-top: 114px;
 }
-h1 {
+
+.heading-title {
   font-size: 48px;
 }
 
 .socials {
-  width: 150px;
-  margin: 0 auto;
-  text-align: center;
   margin-top: 57px;
 }
-.twitter-logo {
+
+.social-icons-list {
+  text-align: center;
+}
+
+.soc-logo {
   display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+.soc-logo:last-child {
+  margin-right: 0;
+}
+
+.twitter-logo {
   width: 17px;
   height: 13.8px;
   background: url(../assets/twitter-logo.png) no-repeat;
@@ -103,30 +127,96 @@ h1 {
 }
 
 .be-logo {
-  display: inline-block;
   width: 20.8px;
   height: 13px;
   background: url(../assets/be-logo.png) no-repeat;
   background-size: cover;
-  margin: 0 30px;
 }
 
 .instagram-logo {
-  display: inline-block;
   width: 16px;
   height: 16px;
   background: url(../assets/instagram-logo.png) no-repeat;
   background-size: cover;
 }
 
-.soc-logo {
- vertical-align: middle;
- transform: rotate(360deg);
- transition: 0.6s;
+/* MAIN */
+
+.main-content {
+  width: 1101px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-image: repeating-linear-gradient(to right, #ededed 0px,#fff 2px, #fff 275px); */
 }
 
-.soc-logo:hover {
-  cursor: pointer;
-  transform: rotate(-360deg);
-  transition: 0.9s;
+.links-section {
+  height: 331px;
+  padding-top: 50px;
 }
+
+/* .links-section::before {
+  content: 'links';
+  position: relative;
+  left: -95px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #979797;
+  letter-spacing: 3px;
+  font-size: 12px;
+} */
+
+.links-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 210px;
+}
+
+.links-section__link {
+  width: 512px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.section-link {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
+
+.year {
+  color: #979797;
+}
+
+.right-side {
+  margin-left: 75px;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 1101px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright, .footer-link {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.footer-link {
+  color: #979797;
+}
+
+.footer-link:nth-child(2) {
+  margin-left: auto;
+  margin-right: 194px;
+}
+
+
