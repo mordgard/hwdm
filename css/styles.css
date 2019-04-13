@@ -34,7 +34,8 @@ a:hover {
   max-width: 1100px;
   min-width: 800px; 
   margin: 0 auto;
-  background-image: repeating-linear-gradient(to right, #ededed 0px,#fff 2px, #fff 24.98%);
+  background: linear-gradient(90deg, #ededed 1px, transparent 0%), #fff;
+  background-size: calc(25% - 0.25px) 1px;
 }
 
 .header {
@@ -46,18 +47,37 @@ a:hover {
 }
 
 .header-nav {
+  position: relative;
   width: 100%;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item:nth-child(1),
+.nav-item:nth-child(2) {
+  float: left;
+}
+
+.nav-item:nth-child(1) {
+  margin-right: 70px;
+}
+
+.nav-item:nth-child(4),
+.nav-item:nth-child(5) {
+  float: right;
+}
+
+.nav-item:nth-child(4) {
+  margin-left: 70px;
 }
 
 .logo-item {
-  margin: 0 20%;
-  transform: translateX(20%);
+  position: absolute;
+  left: 50%;
+  top: -75%;
+  transform: translateX(-50%);
 }
 
 .profile-logo {
@@ -75,7 +95,7 @@ a:hover {
   letter-spacing: 3px;
 }
 
-.heading-title {
+.site-title {
   margin-top: 114px;
   font-size: 3em;
   text-align: center;
@@ -138,13 +158,13 @@ a:hover {
 
 /* WORKS-SECTION */
 
-.works-section {
+.works {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-.works-section::before {
+.works::before {
   content: 'works';
   position: absolute;
   transform: rotate(-90deg);
@@ -158,16 +178,22 @@ a:hover {
 }
 
 .column {
-  width: 47.41%;
+  width: calc((100% - 60px) / 2);
 }
 
 .work {
+  display: block;
   position: relative;
+  margin-bottom: 55px;
+}
+
+.work:last-child {
+  margin-bottom: 0;
 }
 
 .work-title {
   position: absolute;
-  bottom: 110px;
+  bottom: 60px;
   left: 60px;
   font-size: 1.75em;
   font-weight: 900;
@@ -177,7 +203,7 @@ a:hover {
 
 .featured {
   position: absolute;
-  bottom: 210px;
+  bottom: 150px;
   left: 60px;
   padding: 3px 15px; 
   font-size: 0.8em;
@@ -185,29 +211,20 @@ a:hover {
   background-color: #ffe300;
   border-radius: 13.5px;
   color: #000;
-  transition: 0.2s;
-}
-
-.featured:hover {
-  padding: 3px 50px;
-  transition: 0.2s;
 }
 
 .work-picture {
   max-width: 100%;
-  margin-bottom: 55px;
 }
 
 /* ABOUT-SECTION */
 
-.about-section {
+.about {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
-.about-section::before {
+.about::before {
   content: 'about';
   position: absolute;
   transform: rotate(-90deg);
@@ -220,16 +237,21 @@ a:hover {
   text-transform: uppercase;
 }
 
-.slogan {
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-list__item {
   max-width: 50%;
   margin-bottom: 60px;
 }
 
-.slogan:nth-child(odd) {
+.about-list__item:nth-child(odd) {
   padding-right: 50px;
 }
 
-.slogan:nth-child(even) {
+.about-list__item:nth-child(even) {
   padding-left: 30px;
   padding-right: 50px;
 }
@@ -246,11 +268,22 @@ a:hover {
   font-weight: 400;
 }
 
+.pairs-container {
+  width: 100%;
+}
+
+.pairs-wrap {
+  display: inline-block;
+  width: calc(25% - 3px);
+}
+
+.pairs {
+  display: inline-block;
+}
 
 .google {
   width: 129px;
   height: 43px;
-  margin-right: 146px;
   background-image: url(../assets/google.svg);
   background-size: cover;
 }
@@ -258,7 +291,6 @@ a:hover {
 .airbnb {
   width: 138px;
   height: 43px;
-  margin-right: 137px;
   background-image: url(../assets/airbnb.svg);
   background-size: cover;
 }
@@ -272,13 +304,13 @@ a:hover {
 
 /* LINKS-SECTION */
 
-.links-section {
+.links {
   position: relative;
   margin-top: 120px;
   margin-bottom: 120px;
 }
 
-.links-section::before {
+.links::before {
   content: 'links';
   position: absolute;
   transform: rotate(-90deg);
